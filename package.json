@@ -1,12 +1,15 @@
 {
 	"name": "aelienz-types",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"main": "lib/index.js",
 	"types": "lib",
 	"repository": "https://github.com/aelienz/types.git",
 	"author": {
 		"name": "mathletedev",
 		"email": "mathletedev@gmail.com"
+	},
+	"scripts": {
+		"pb": "tsc && npm publish"
 	},
 	"license": "Apache-2.0"
 }
