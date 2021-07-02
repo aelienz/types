@@ -21,7 +21,7 @@ export abstract class Entity {
 
 	public abstract update(): any;
 
-	public translate(x: number, y: number) {
+	public translate({ x = 0, y = 0 }) {
 		this.transform.x += x;
 		this.transform.y += y;
 	}
