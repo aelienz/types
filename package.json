@@ -1,6 +1,6 @@
 {
 	"name": "aelienz-types",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"main": "lib/index.js",
 	"types": "lib",
 	"repository": "https://github.com/aelienz/types.git",

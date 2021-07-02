@@ -21,6 +21,11 @@ export abstract class Entity {
 
 	public abstract update(): any;
 
+	public translate(x: number, y: number) {
+		this.transform.x += x;
+		this.transform.y += y;
+	}
+
 	public render() {
 		if (!this.image.complete || this.image.naturalHeight === 0) return;
 
