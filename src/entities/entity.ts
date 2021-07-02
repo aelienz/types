@@ -1,35 +1,17 @@
 import { Transform } from "../interfaces";
 
-export abstract class Entity {
-	private transform: Transform;
-	private ctx: CanvasRenderingContext2D;
-	private image: HTMLImageElement;
+export class Entity {
+	public transform: Transform;
+	public readonly image: string;
 
 	public constructor({
-		ctx,
 		transform = { x: 0, y: 0 },
 		image
 	}: {
-		ctx: CanvasRenderingContext2D;
 		transform: Transform;
-		image: HTMLImageElement;
+		image: string;
 	}) {
 		this.transform = transform;
-		this.ctx = ctx;
 		this.image = image;
-	}
-
-	public abstract update(): any;
-
-	public translate({ x = 0, y = 0 }) {
-		this.transform.x += x;
-		this.transform.y += y;
-	}
-
-	public render() {
-		if (!this.image.complete || this.image.naturalHeight === 0)
-			throw new Error("Entity image not loaded yet!");
-
-		this.ctx.drawImage(this.image, this.transform.x, this.transform.y);
 	}
 }

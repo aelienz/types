@@ -8,21 +8,17 @@ export class PlayerEntity extends Entity {
 	public constructor({
 		socket,
 		player,
-		ctx,
 		transform,
 		image
 	}: {
 		socket: Socket;
 		player: Player;
-		ctx: CanvasRenderingContext2D;
 		transform: Transform;
-		image: HTMLImageElement;
+		image: string;
 	}) {
-		super({ ctx, transform, image });
+		super({ transform, image });
 
 		this.socket = socket;
 		this.player = player;
 	}
-
-	public update() {}
 }
