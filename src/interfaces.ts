@@ -1,3 +1,5 @@
+import { Entity } from "./entities";
+
 export interface Socket {
 	id: string;
 }
@@ -9,4 +11,8 @@ export interface Transform {
 
 export interface Player {
 	name: string;
+}
+
+export interface GameState {
+	entities: Entity[];
 }
