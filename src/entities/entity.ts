@@ -27,7 +27,8 @@ export abstract class Entity {
 	}
 
 	public render() {
-		if (!this.image.complete || this.image.naturalHeight === 0) return;
+		if (!this.image.complete || this.image.naturalHeight === 0)
+			throw new Error("Entity image not loaded yet!");
 
 		this.ctx.drawImage(this.image, this.transform.x, this.transform.y);
 	}
