@@ -1,4 +1,4 @@
-import { Entity } from "./entities";
+import { Entity, PlayerEntity } from "./entities";
 
 export interface Socket {
 	id: string;
@@ -14,5 +14,5 @@ export interface Player {
 }
 
 export interface GameState {
-	entities: Entity[];
+	entities: (Entity | PlayerEntity)[];
 }
