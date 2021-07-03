@@ -1,7 +1,7 @@
 import { Entity, PlayerEntity } from "./entities";
 
 export interface Socket {
-	id: string;
+	readonly id: string;
 }
 
 export interface Transform {
@@ -10,7 +10,7 @@ export interface Transform {
 }
 
 export interface Player {
-	name: string;
+	readonly name: string;
 }
 
 export interface GameState {
